@@ -13,16 +13,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Map;
 
+//The report of score at the end of taking Quiz
 public class ScoreReport extends Activity {
 
     private ArrayList<Question> wrongQuestions;
 
-
+    //Displays the questions you got wrong
     private void set_wrongQuestions(){
-
         String content = "";
         assert wrongQuestions != null;
-        //Log.i("SET WRONG QUESTIONS", "" + wrongQuestions.size());
         for(Question q : wrongQuestions ){
                 content += q.getQuestionType() + "  from:" + q.getFrom() + "  to:" + q.getTo() + "\n";
         }
@@ -37,7 +36,7 @@ public class ScoreReport extends Activity {
         String[] from = intent.getStringArrayExtra( "from" );
         String[] to = intent.getStringArrayExtra( "to" );
         String[] questionType = intent.getStringArrayExtra( "questionType" );
-        ArrayList<Question> res = new ArrayList<Question>();
+        ArrayList<Question> res = new ArrayList<>();
         for(int i = 0 ; i < from.length ; ++i){
             res.add( new Question( from[i], to[i], questionType[i] ));
         }
@@ -79,11 +78,13 @@ public class ScoreReport extends Activity {
         }
     }
 
+    //Go take a new quiz
     public void newTestSelection(View view){
         Intent activity = new Intent(this, QuizSelection.class);
         startActivity(activity);
     }
 
+    //Go to the calculator page from this page
     public void goToCalculator(View view){
         Intent activity = new Intent(this, ExpressionActivity.class);
         MyUtils.startNoHistoryAcitivity(this, activity);

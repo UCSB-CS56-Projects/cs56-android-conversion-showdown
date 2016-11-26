@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+//Class that deals with the Quiz you can customize in Quiz Selection
 public class Quiz extends Activity implements OnClickListener {
 
     int numberQuestions = 0;       // test length
@@ -80,7 +81,7 @@ public class Quiz extends Activity implements OnClickListener {
 
     };
     int[] scoreBoardByKey = new int[13];
-    private ArrayList<Question> wrongQuestions = new ArrayList<Question>();
+    private ArrayList<Question> wrongQuestions = new ArrayList<>();
 
     private void initializeScoreBoard() {
         for (int i = 0; i < scoreBoardByKey.length; ++i) {
@@ -181,21 +182,17 @@ public class Quiz extends Activity implements OnClickListener {
 
     private void set_input_error(TextView answer, int radix) {
         if (answer.getText().toString().equals("")) {
-            answer.setError("Please input a value.");
-            return;
+            answer.setError("Please input a value");
         }
         if (radix == 2) {
             answer.setError("Binary is only 1 and 0");
-            return;
         }
         if (radix == 8) {
             answer.setError("Octal doesn't have 8 or 9");
-            return;
         }
         // above checks if value is entered and that it is an appropriate value
         if (radix == 16) {
             answer.setError("Hex number format wrong");
-            return;
         }
 
     }

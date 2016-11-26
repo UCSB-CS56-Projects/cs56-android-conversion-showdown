@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.TextView;
 
+//Introduction page after Splash Screen and Welcome
 public class Introduction extends Activity implements OnClickListener {
 
     Button btnStartAnotherActivity;
@@ -33,8 +34,7 @@ public class Introduction extends Activity implements OnClickListener {
         TextView resp = (TextView) findViewById(R.id.response);
         Intent intent = getIntent();
         String name = intent.getStringExtra(Welcome.EXTRA_NAME);
-        String str = "Welcome " + name + "!";
-        resp.setText(str);
+        resp.setText("Welcome " + name + "!");
 
 
         startQuizButton.setOnClickListener(new OnClickListener() {
@@ -66,7 +66,7 @@ public class Introduction extends Activity implements OnClickListener {
     @Override
     public void onClick(View view) {
 
-        Intent intent = new Intent(this, ExpressionActivity.class);
+        Intent intent = new Intent(this, baseCalculator.class);
         MyUtils.startNoHistoryAcitivity( this, intent );
     }
 
