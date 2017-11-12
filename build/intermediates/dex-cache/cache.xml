@@ -1,2 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\.android\build-cache\d2c386ead8eab14365412e3d9d4d8d7c8e8cc9e0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_74e61ca8f5933db17caed1a7e228bf84d27d1365\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\.android\build-cache\962caa587ef39e57fd6df40cf301753e687b50d0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_df236d7e10c5750f3f8442fc0b459be5bb7bdbe9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_8ec41c78c02fda862dd228c36fa3bcecf675c786\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\.android\build-cache\cd5955a5200445fda64a02c80e02a8b45b08af5f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2386c76af018a764bc5f5aa06eecd84a223ae669\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\lib\jeval.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="584be0ac1655138c7bb513aeb5043b5c39039af4">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\2\jeval_26c0ededcd98cd6ef18e5f6b4b17d39a75a50347\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c78622d394ac35eee6777045749271afac4403e5">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_107893d00101887069bdf989463c5b0c702887d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_a5f7bc50a673d05f9a712049b9482f807b4afaf0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\.android\build-cache\7e60e127f6b30f7cfeaee7a03e8680b7cdc451b0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4fcaf18d178ef10f595bb81442da97d3b32b6b16\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lcc\.android\build-cache\962caa587ef39e57fd6df40cf301753e687b50d0\output\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Lcc\Desktop\lab05\cs56-android-conversion-showdown-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_022f28ff5d8831ef39d2fa8682075995a834abd8\classes.dex" />
+    </item>
+
+</items>
