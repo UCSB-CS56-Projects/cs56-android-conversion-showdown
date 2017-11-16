@@ -18,7 +18,7 @@ import android.widget.RadioButton;
 public class QuizSelection extends Activity implements OnClickListener {
 
     int selection[] = new int[13];       //array to hold keys, key values listed in comment below
-    public int numberQuestions = 6;     //default number of questions to 6
+    public int numberQuestions = 5000;     //default number of questions to 6
     int difficulty = 0;                 //default difficulty to low or easiest one
 
     @Override
@@ -186,4 +186,5 @@ public class QuizSelection extends Activity implements OnClickListener {
                     break;
         }
     }
+
 }

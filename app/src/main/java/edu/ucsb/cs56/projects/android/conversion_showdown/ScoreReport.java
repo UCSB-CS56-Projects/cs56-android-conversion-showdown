@@ -86,9 +86,31 @@ public class ScoreReport extends Activity {
 
     //Go to the calculator page from this page
     public void goToCalculator(View view){
-        Intent activity = new Intent(this, ExpressionActivity.class);
-        MyUtils.startNoHistoryAcitivity(this, activity);
+        Intent i = new Intent(this, baseCalculator.class);
+        startActivityForResult(i, 1);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                String result=data.getStringExtra("result");
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }//onActivityResult
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        startActivity(new Intent(ScoreReport.this, Introduction.class));
+        finish();
+
+    }
+
 
 
 }
