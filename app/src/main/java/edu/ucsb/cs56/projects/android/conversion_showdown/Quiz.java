@@ -114,69 +114,69 @@ public class Quiz extends Activity implements OnClickListener {
         initializeScoreBoard();
         setContentView(R.layout.quiz);
 
-            int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
-            numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
-            difficulty = getIntent().getIntExtra("difficulty", 0);
+        int selectedOptions[] = getIntent().getIntArrayExtra("selection");  //receives array of key values
+        numberQuestions = getIntent().getIntExtra("numberQuestions", -1);   //receives user desired test length
+        difficulty = getIntent().getIntExtra("difficulty", 0);
 
-            //adds key values taken from selection activity into ArrayList
-            for (int j = 0; j < 11; j++) {
-                if (selectedOptions[j] != 0) {
-                    arrayOfKeys.add(selectedOptions[j]);
-                }
+        //adds key values taken from selection activity into ArrayList
+        for (int j = 0; j < 11; j++) {
+            if (selectedOptions[j] != 0) {
+                arrayOfKeys.add(selectedOptions[j]);
             }
-            length = arrayOfKeys.size();
-
-            TextView problemString = (TextView) findViewById(R.id.convertstring);  // variable to change problem String
-            TextView problemNumber = (TextView) findViewById(R.id.convertThis);    // variable to change problem number
-            TextView questionDescription = (TextView) findViewById(R.id.textView3);     // problem description
-            EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);     //allows keyboard type to change for the problem
-            Button startSwiperButton = (Button) findViewById(R.id.startSwiperButton);
-            startSwiperButton.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(Quiz.this, SwiperCalculatorActivity.class);
-                    startActivityForResult(intent, 0);
-                }
-            });
-            if (selectedOptions[0] == 1) {
-                key = 1;      //Decimal to Binary conversion
-                problemString.setText("Decimal:");
-                questionDescription.setText(R.string.questionKey1);
-                editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
-            }
-            if (selectedOptions[2] == 3) {
-                key = 3;      //Decimal to Octal conversion
-                problemString.setText("Decimal:");
-                questionDescription.setText(R.string.questionKey3);
-                editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
-            }
-            if (selectedOptions[4] == 5) {
-                key = 5;      //Binary to Octal conversion
-                problemString.setText("Binary:");
-                questionDescription.setText(R.string.questionKey5);
-                editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
-            }
-            if (selectedOptions[6] == 7) {
-                key = 7;      //Decimal to Hexadecimal conversion
-                problemString.setText("Decimal:");
-                questionDescription.setText(R.string.questionKey7);
-                editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
-            }
-            if (selectedOptions[8] == 9) {
-                key = 9;      //Binary to Hexadecimal conversion
-                problemString.setText("Binary:");
-                questionDescription.setText(R.string.questionKey9);
-                editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
-            }
-            if (selectedOptions[10] == 11) {
-                key = 11;      //Octal to Hexadecimal conversion
-                problemString.setText("Octal:");
-                questionDescription.setText(R.string.questionKey11);
-                editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
-            }
-
-            changeNumber(null);
         }
+        length = arrayOfKeys.size();
+
+        TextView problemString = (TextView) findViewById(R.id.convertstring);  // variable to change problem String
+        TextView problemNumber = (TextView) findViewById(R.id.convertThis);    // variable to change problem number
+        TextView questionDescription = (TextView) findViewById(R.id.textView3);     // problem description
+        EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);     //allows keyboard type to change for the problem
+        Button startSwiperButton = (Button) findViewById(R.id.startSwiperButton);
+        startSwiperButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Quiz.this, SwiperCalculatorActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+        if (selectedOptions[0] == 1) {
+            key = 1;      //Decimal to Binary conversion
+            problemString.setText("Decimal:");
+            questionDescription.setText(R.string.questionKey1);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);    //keyboard only numbers
+        }
+        if (selectedOptions[2] == 3) {
+            key = 3;      //Decimal to Octal conversion
+            problemString.setText("Decimal:");
+            questionDescription.setText(R.string.questionKey3);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
+        }
+        if (selectedOptions[4] == 5) {
+            key = 5;      //Binary to Octal conversion
+            problemString.setText("Binary:");
+            questionDescription.setText(R.string.questionKey5);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_NUMBER);
+        }
+        if (selectedOptions[6] == 7) {
+            key = 7;      //Decimal to Hexadecimal conversion
+            problemString.setText("Decimal:");
+            questionDescription.setText(R.string.questionKey7);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);     //keyboard has letters & numbers
+        }
+        if (selectedOptions[8] == 9) {
+            key = 9;      //Binary to Hexadecimal conversion
+            problemString.setText("Binary:");
+            questionDescription.setText(R.string.questionKey9);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+        if (selectedOptions[10] == 11) {
+            key = 11;      //Octal to Hexadecimal conversion
+            problemString.setText("Octal:");
+            questionDescription.setText(R.string.questionKey11);
+            editkeyboard.setInputType(InputType.TYPE_CLASS_TEXT);
+        }
+
+        changeNumber(null);
+    }
 
 
     public void onClick(View view) {
@@ -352,8 +352,8 @@ public class Quiz extends Activity implements OnClickListener {
         activity.putExtra("arrayOfKeys", new ArrayList<Integer>(arrayOfKeys));
         activity.putExtra("wrongQuestions", wrongQuestions);
         //parcelWrongQuestions( activity );
-        MyUtils.startNoHistoryAcitivity(this, activity);
-        //startActivity( activity );
+        //MyUtils.startNoHistoryAcitivity(this, activity);
+        startActivity( activity );
     }
 
     public int generateQuestionNumber() {
@@ -474,6 +474,37 @@ public class Quiz extends Activity implements OnClickListener {
     public void Abort(View view) {
         endQuiz();
     }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
 
+        // Save UI state changes to the savedInstanceState.
+        // This bundle will be passed to onCreate if the process is
+        // killed and restarted.
+
+        savedInstanceState.putBoolean("MyBoolean", true);
+        savedInstanceState.putDouble("myDouble", 1.9);
+        savedInstanceState.putInt("MyInt", 1);
+        savedInstanceState.putString("MyString", "Welcome back to Android");
+
+        // etc.
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+//onRestoreInstanceState
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore UI state from the savedInstanceState.
+        // This bundle has also been passed to onCreate.
+
+        boolean myBoolean = savedInstanceState.getBoolean("MyBoolean");
+        double myDouble = savedInstanceState.getDouble("myDouble");
+        int myInt = savedInstanceState.getInt("MyInt");
+        String myString = savedInstanceState.getString("MyString");
+    }
 
 }
