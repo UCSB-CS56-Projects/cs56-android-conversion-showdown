@@ -10,27 +10,19 @@
         android:screenOrientation="portrait"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-<<<<<<< HEAD
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.SplashScreen"
-            android:label="Conversion Showdown!">
-=======
-            android:name=".SplashScreen"
-            android:screenOrientation="landscape"
             android:label="Conversion Showdown!"
+            android:screenOrientation="landscape"
             android:configChanges="keyboard|orientation|locale|fontScale|screenLayout|screenSize|uiMode|navigation|touchscreen|keyboardHidden|layoutDirection|smallestScreenSize">
->>>>>>> lcc/master
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.Welcome"
-=======
-            android:name=".Welcome"
             android:configChanges="orientation|keyboardHidden"
->>>>>>> lcc/master
             android:label="Conversion Showdown!" />
         <activity
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.baseCalculator"

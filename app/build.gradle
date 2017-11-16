@@ -3,11 +3,8 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-<<<<<<< HEAD
-    buildToolsVersion '25.0.0'
-=======
     buildToolsVersion '26.0.2'
->>>>>>> lcc/master
+
 
     defaultConfig {
         applicationId "edu.ucsb.cs56.projects.android.conversion_showdown"
