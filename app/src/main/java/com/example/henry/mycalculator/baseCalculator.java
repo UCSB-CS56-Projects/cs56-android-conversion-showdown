@@ -1,6 +1,7 @@
 package com.example.henry.mycalculator;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -93,7 +94,15 @@ public class baseCalculator extends Activity {
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.base_menu, popup.getMenu());
         popup.show();
+
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,11 +157,18 @@ public class baseCalculator extends Activity {
             public void onClick(View v) {
                 showPopup(v, 2);
             }
-        });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        });// ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
+    public void goBack(View view){
+        Intent returnIntent = new Intent();
+        setResult(Activity.RESULT_CANCELED, returnIntent);
+        finish();
+    }
+
 
     public void calculate(){
         String input1 = firstInput.getText().toString();
@@ -193,6 +209,10 @@ public class baseCalculator extends Activity {
         }
     }
 
+
 }
+
+
+
 
 

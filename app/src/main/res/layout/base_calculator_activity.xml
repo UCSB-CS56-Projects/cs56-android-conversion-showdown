@@ -14,6 +14,7 @@
         android:id="@+id/baseCalculatorTitle"
         android:textAlignment="center"
         android:textSize="36sp"
+        android:digits="abcdef1234567890 "
         android:textAllCaps="true"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
@@ -75,9 +76,9 @@
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textSize="24sp"
-            android:textAllCaps="false"
-            android:typeface="sans"
-            android:inputType="number" />
+            android:digits="abcdef1234567890 "
+            android:textAllCaps="true"
+            android:typeface="sans" />
 
         <EditText
             android:id="@+id/secondInput"
@@ -92,9 +93,9 @@
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textSize="24sp"
-            android:textAllCaps="false"
-            android:typeface="sans"
-            android:inputType="number" />
+            android:digits="abcdef1234567890 "
+            android:textAllCaps="true"
+            android:typeface="sans" />
 
     </LinearLayout>
 
