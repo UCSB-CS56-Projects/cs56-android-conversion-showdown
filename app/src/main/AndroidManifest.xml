@@ -13,7 +13,7 @@
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.SplashScreen"
             android:label="Conversion Showdown!"
             android:screenOrientation="landscape"
-            android:configChanges=android:configChanges="orientation|screenSize|keyboardHidden">
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
