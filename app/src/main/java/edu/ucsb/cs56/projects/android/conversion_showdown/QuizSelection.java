@@ -181,7 +181,7 @@ public class QuizSelection extends Activity implements OnClickListener {
                 break;
             case R.id.Endless:
                 if (checked)
-                    numberQuestions = 5000;
+                    numberQuestions = Integer.MAX_VALUE;
                     //5000 questions for Endless
                     break;
         }

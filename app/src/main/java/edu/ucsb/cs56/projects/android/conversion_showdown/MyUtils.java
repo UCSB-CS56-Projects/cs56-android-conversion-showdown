@@ -51,7 +51,7 @@ public class MyUtils {
      * @throws IntOverFlow
      */
     public static boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow{
-        if (sAnswer.length() == 0 || sAnswer.length() > 12){
+        if (sAnswer.length() == 0 || sAnswer.length() > 15){
             throw new IntOverFlow();
         }
         char[] answerChars = sAnswer.toCharArray();

@@ -13,7 +13,7 @@
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.SplashScreen"
             android:label="Conversion Showdown!"
             android:screenOrientation="landscape"
-            android:configChanges="keyboard|orientation|locale|fontScale|screenLayout|screenSize|uiMode|navigation|touchscreen|keyboardHidden|layoutDirection|smallestScreenSize">
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         </activity>
         <activity
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.Welcome"
-            android:configChanges="orientation|keyboardHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="Conversion Showdown!" />
         <activity
             android:name="edu.ucsb.cs56.projects.android.conversion_showdown.baseCalculator"
