@@ -142,6 +142,10 @@ Only issue is when the user enters a hex letter (any letter) the app test will s
 
 5) Score Report Screen displays the users final score and will change the background depending on the percentage the user got on the quiz. It also has two buttons that allow the user to use the calculator or create a new test.
 
+## F17 Final Remarks
+
+For the next group taking on this legacy project, we highly recommend you to put javadoc as the first item in your to-do list. Reading through the current javadoc will give you minimum understanding of each class’s functionality and the current working progress of this android app. After that, you will realize that javadoc requires further refinement and amendment to the current version. Completing this task, I believe, will greatly extend your knowledge about android programming and application workflow giving you a head start for making more contributions to this project later. Moreover, another issue we suggest you dealing with is saving states issue. This problem is all over the place and occurs again and again. Such issue can cause many bugs, such as textbox disappearing or unexpected score resetting. Each time you have a bug, you should think whether unsaving states is the reason or saving states can be the solution. Please try your best to fix it. It takes time but very worth a try because this is a hard problem that even combining the effort of three talented group cannot solve. Solve it and be proud of yourselves. At last, note that android programming is a time-consuming and painstaking process. You will encounter numerous obstacles and setbacks. However, you should be patient. Google. Youtube, and StackOverflow will help you a lot and save your life. So good luck!
+
 ## W16 Final Remarks
 https://github.com/UCSB-CS56-Projects/cs56-android-getting-started/tree/master/docs/tutorial 
 <br />
