@@ -17,10 +17,10 @@ import java.util.TreeSet;
 public class MyUtils {
 
     //The characters shown are basically what are allowed
-    final public static ArrayList<Character> symbols = new ArrayList<>( Arrays.asList(new Character[]{
-            '0', '1', '2', '3' , '4' , '5', '6' , '7' , '8' , '9',
-            'A', 'B', 'C', 'D', 'E', 'F'
-    }));
+    final public static ArrayList<Character> symbols = new ArrayList<>(Arrays.asList(new Character[]{
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                'A', 'B', 'C', 'D', 'E', 'F'
+        }));
 
     static TreeSet<Integer> baseWhiteList = new TreeSet<Integer>(){
         {
@@ -50,7 +50,9 @@ public class MyUtils {
      * @return
      * @throws IntOverFlow
      */
-    public static boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow{
+
+
+    public static boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow, SanityCheckException{
         if (sAnswer.length() == 0 || sAnswer.length() > 15){
             throw new IntOverFlow();
         }
@@ -67,7 +69,7 @@ public class MyUtils {
                 }
             }
             if (!isValid)
-                break;
+                throw new SanityCheckException();
         }
         return isValid;
 
