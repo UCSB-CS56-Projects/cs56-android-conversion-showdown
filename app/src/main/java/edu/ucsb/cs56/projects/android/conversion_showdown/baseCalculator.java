@@ -168,44 +168,44 @@ public class baseCalculator extends Activity {
 
 
     public void calculate(){
+        firstInput.setError(null);
+        secondInput.setError(null);
         String input1 = firstInput.getText().toString();
         String input2 = secondInput.getText().toString();
         String result = "";
         boolean negative = false;
         try {
             Converter converter1 = new Converter(input1, inputOneBase);
-            Converter converter2 = new Converter(input2, inputOneBase);
-            if (!converter1.isValid()) {
-                firstInput.setError("Input Format Error");
-            } else if (!converter2.isValid()) {
-                secondInput.setError("Input Format Error");
-            }
+            Converter converter2 = new Converter(input2, inputTwoBase);
+
             int input1_decimal = Integer.parseInt(converter1.toBase(10));
             int input2_decimal = Integer.parseInt(converter2.toBase(10));
-            if(operation == 0) {
+            if (operation == 0) {
                 result = Integer.toString(input1_decimal + input2_decimal);
-            } else if(operation == 1){
+            } else if (operation == 1) {
                 int value = input1_decimal - input2_decimal;
-                if(value < 0) {
+                if (value < 0) {
                     negative = true;
-                } else{
+                } else {
                     negative = false;
                 }
                 result = Integer.toString(Math.abs(value));
-            } else if(operation == 2) {
+            } else if (operation == 2) {
                 result = Integer.toString(input1_decimal * input2_decimal);
             }
             Converter converter3 = new Converter(result, 10);
-            if(!negative) {
+            if (!negative) {
                 baseCalcResult.setText(converter3.toBase(resultBase));
             } else {
                 baseCalcResult.setText("-" + converter3.toBase(resultBase));
             }
         } catch (IntOverFlow e) {
-            firstInput.setError("Input Number Too Large");
+            firstInput.setError("At least one of the input numbers is too large");
+            secondInput.setError("At least one of the input numbers is too large");
+        } catch (SanityCheckException e){
+            firstInput.setError("At least one of them has wrong input format");
+            secondInput.setError("At least one of them has wrong input format");
         }
     }
-
-
 }
 

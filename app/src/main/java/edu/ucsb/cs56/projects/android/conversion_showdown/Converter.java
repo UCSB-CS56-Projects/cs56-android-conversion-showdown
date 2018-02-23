@@ -16,7 +16,7 @@ public class Converter {
      * @param base
      * @throws IntOverFlow
      */
-    public Converter(String s , int base) throws IntOverFlow {
+    public Converter(String s , int base) throws IntOverFlow, SanityCheckException {
         if (!MyUtils.sanity_check(s, base)) {
             isValid = false;
             return;

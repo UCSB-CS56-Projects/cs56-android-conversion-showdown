@@ -17,10 +17,10 @@ import java.util.TreeSet;
 public class MyUtils {
 
     //The characters shown are basically what are allowed
-    final public static ArrayList<Character> symbols = new ArrayList<>( Arrays.asList(new Character[]{
-            '0', '1', '2', '3' , '4' , '5', '6' , '7' , '8' , '9',
-            'A', 'B', 'C', 'D', 'E', 'F'
-    }));
+    final public static ArrayList<Character> symbols = new ArrayList<>(Arrays.asList(new Character[]{
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                'A', 'B', 'C', 'D', 'E', 'F'
+        }));
 
     static TreeSet<Integer> baseWhiteList = new TreeSet<Integer>(){
         {
@@ -50,24 +50,30 @@ public class MyUtils {
      * @return
      * @throws IntOverFlow
      */
-    public static boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow{
+
+
+    public static boolean sanity_check( String sAnswer, int radix ) throws IntOverFlow, SanityCheckException{
         if (sAnswer.length() == 0 || sAnswer.length() > 15){
             throw new IntOverFlow();
         }
         char[] answerChars = sAnswer.toCharArray();
         boolean isValid = false;
-        for(char c : answerChars ) {
-            isValid = false;
-            for (int i = 0 ; i < radix ; ++i ) {
-                Character target = symbols.get(i);
-                if ( (target.equals(c)) |
-                        (target.isLetter(target) && Character.toLowerCase(target) == c) ) {
-                    isValid = true;
-                    break;
+        if(radix==10 && answerChars[0]=='0' && answerChars.length!=1){
+            throw new SanityCheckException();
+        } else {
+            for (char c : answerChars) {
+                isValid = false;
+                for (int i = 0; i < radix; ++i) {
+                    Character target = symbols.get(i);
+                    if ((target.equals(c)) |
+                            (target.isLetter(target) && Character.toLowerCase(target) == c)) {
+                        isValid = true;
+                        break;
+                    }
                 }
+                if (!isValid)
+                    throw new SanityCheckException();
             }
-            if (!isValid)
-                break;
         }
         return isValid;
 

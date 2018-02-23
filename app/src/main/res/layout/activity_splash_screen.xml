@@ -24,21 +24,20 @@
         android:layout_alignStart="@+id/textView5" />
 
     <TextView
-        android:text="UCSB"
+        android:id="@+id/textView5"
         android:layout_width="265dp"
         android:layout_height="105dp"
-        android:id="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:freezesText="true"
-        android:textColor="@color/bright_foreground_disabled_material_dark"
-        android:textSize="90sp"
+        android:text="UCSB"
         android:textAlignment="center"
         android:textAllCaps="true"
+        android:textColor="@color/bright_foreground_disabled_material_dark"
+        android:textSize="90sp"
         android:textStyle="bold"
         android:typeface="serif"
-        tools:layout_editor_absoluteY="208dp"
         tools:layout_editor_absoluteX="60dp"
-        android:layout_marginTop="221dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        tools:layout_editor_absoluteY="208dp" />
 
 </RelativeLayout>
