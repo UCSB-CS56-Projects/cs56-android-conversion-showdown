@@ -58,7 +58,7 @@ public class MyUtils {
         }
         char[] answerChars = sAnswer.toCharArray();
         boolean isValid = false;
-        if(answerChars[0]=='0' && answerChars.length!=1){
+        if(radix==10 && answerChars[0]=='0' && answerChars.length!=1){
             throw new SanityCheckException();
         } else {
             for (char c : answerChars) {

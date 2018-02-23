@@ -176,7 +176,7 @@ public class baseCalculator extends Activity {
         boolean negative = false;
         try {
             Converter converter1 = new Converter(input1, inputOneBase);
-            Converter converter2 = new Converter(input2, inputOneBase);
+            Converter converter2 = new Converter(input2, inputTwoBase);
 
             int input1_decimal = Integer.parseInt(converter1.toBase(10));
             int input2_decimal = Integer.parseInt(converter2.toBase(10));
