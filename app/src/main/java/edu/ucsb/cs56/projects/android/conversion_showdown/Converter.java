@@ -29,7 +29,7 @@ public class Converter {
      * @return
      */
     public String toHex(){
-        return Integer.toHexString( num );
+        return Integer.toString( num, 16 );
     }
 
     /**
@@ -37,23 +37,21 @@ public class Converter {
      * @return
      */
     public String toOct(){
-        return Integer.toOctalString( num );
+        return Integer.toString( num, 8 );
     }
 
     /**
      * Return a String of number in Dec.
      * @return
      */
-    public String toDec(){
-        return num.toString();
-    }
+    public String toDec(){ return Integer.toString(num, 10);}
 
     /**
      * Return a String of number in Bin.
      * @return
      */
     public String toBin(){
-        return Integer.toBinaryString( num );
+        return Integer.toString( num, 2 );
     }
 
     /**
