@@ -61,6 +61,10 @@ public class MyUtils {
         for(char c : answerChars ) {
             isValid = false;
             for (int i = 0 ; i < radix ; ++i ) {
+                if (radix==10 && c == symbols.get(0) && answerChars.length!=1){ //you are giving a decimal number like 0101
+                    isValid = false;
+                    break;
+                }
                 Character target = symbols.get(i);
                 if ( (target.equals(c)) |
                         (target.isLetter(target) && Character.toLowerCase(target) == c) ) {
