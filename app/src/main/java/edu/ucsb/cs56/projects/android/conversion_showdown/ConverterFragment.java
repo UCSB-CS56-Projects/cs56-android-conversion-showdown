@@ -127,11 +127,6 @@ public class ConverterFragment extends Fragment {
             try {
                 //Uses Converter class to help validate input
                 Converter converter = new Converter(input, fromBase);
-                /*
-                if (!converter.isValid()) {
-                    mFromText.setError("Input Format Error");
-                }
-                */
                 mToText.setText(converter.toBase(toBase));
                 MyUtils.hideSoftKeyBoard(v, inputMethodManager);
 

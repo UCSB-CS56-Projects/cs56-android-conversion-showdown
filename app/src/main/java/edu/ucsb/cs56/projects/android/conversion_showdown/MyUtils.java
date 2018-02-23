@@ -58,22 +58,22 @@ public class MyUtils {
         }
         char[] answerChars = sAnswer.toCharArray();
         boolean isValid = false;
-        for(char c : answerChars ) {
-            isValid = false;
-            for (int i = 0 ; i < radix ; ++i ) {
-                if (radix==10 && c == symbols.get(0) && answerChars.length!=1){ //you are giving a decimal number like 0101
-                    isValid = false;
-                    break;
+        if(answerChars[0]=='0' && answerChars.length!=1){
+            throw new SanityCheckException();
+        } else {
+            for (char c : answerChars) {
+                isValid = false;
+                for (int i = 0; i < radix; ++i) {
+                    Character target = symbols.get(i);
+                    if ((target.equals(c)) |
+                            (target.isLetter(target) && Character.toLowerCase(target) == c)) {
+                        isValid = true;
+                        break;
+                    }
                 }
-                Character target = symbols.get(i);
-                if ( (target.equals(c)) |
-                        (target.isLetter(target) && Character.toLowerCase(target) == c) ) {
-                    isValid = true;
-                    break;
-                }
+                if (!isValid)
+                    throw new SanityCheckException();
             }
-            if (!isValid)
-                throw new SanityCheckException();
         }
         return isValid;
 

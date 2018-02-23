@@ -168,6 +168,8 @@ public class baseCalculator extends Activity {
 
 
     public void calculate(){
+        firstInput.setError(null);
+        secondInput.setError(null);
         String input1 = firstInput.getText().toString();
         String input2 = secondInput.getText().toString();
         String result = "";
