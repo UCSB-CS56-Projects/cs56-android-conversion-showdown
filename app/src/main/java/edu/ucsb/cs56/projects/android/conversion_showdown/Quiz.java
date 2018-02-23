@@ -229,7 +229,7 @@ public class Quiz extends Activity implements OnClickListener {
         if (key == 2 || key == 4 || key == 8) {
             radix = 10;
         }
-        if (key == 7 || key == 9 || key == 11) {
+        if (key == 7 || key == 9 || key == 11 ) {
             radix = 16;
         }
 
@@ -273,6 +273,8 @@ public class Quiz extends Activity implements OnClickListener {
         } catch (IntOverFlow e) {
             set_input_error(0, answer);
             return;
+        } catch (SanityCheckException e){
+            set_input_error(0, answer); //stub!!!
         }
 
         //user Answer is the answer from the user.
@@ -304,6 +306,8 @@ public class Quiz extends Activity implements OnClickListener {
             try {
                 target = (new Converter(origin, fromBase)).toBase(radix);
             } catch (IntOverFlow e) {
+
+            } catch (SanityCheckException e){
 
             }
             wrongQuestions.add(new Question(
