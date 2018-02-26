@@ -68,16 +68,16 @@ JavaDoc Link: https://github.com/kerrymo/cs56-android-conversion-showdown/tree/p
 ## Screenshots
 
 Screenshots of the running Application goes here. <br />
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/EntryScreen.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/WelcomeScreen.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/Calculator.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/TestSelection.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/QuizBasic.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/QuizBinaryE.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/QuizOctalE.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/QuizIncorrect.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/ResultBad.PNG)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/main/res/readmePic/ResultGood.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/EntryScreen.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/WelcomeScreen.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/Calculator.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/TestSelection.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/QuizBasic.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/QuizBinaryE.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/QuizOctalE.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/QuizIncorrect.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ResultBad.PNG)
+![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ResultGood.PNG)
 
 
 
