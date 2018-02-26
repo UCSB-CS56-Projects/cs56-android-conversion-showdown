@@ -66,16 +66,16 @@ JavaDoc Link: http://ucsb-cs56-projects.github.io/cs56-android-conversion-showdo
 ## Screenshots
 
 Screenshots of the running Application goes here. <br />
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/EntryScreen.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/WelcomeScreen.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/Calculator.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/TestSelection.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizBasic.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizBinaryE.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizOctalE.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/QuizIncorrect.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/ResultBad.PNG)
-![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/ResultGood.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/EntryScreen.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/WelcomeScreen.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/Calculator.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/TestSelection.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/QuizBasic.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/QuizBinaryE.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/QuizOctalE.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/QuizIncorrect.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/ResultBad.PNG)
+![Alt tag](https://github.com/henryhyu/android-quiz/blob/master/pic/ResultGood.PNG)
 
 
 ## Legacy Code Issues
