@@ -31,6 +31,7 @@ public class Introduction extends Activity implements OnClickListener {
 
         Button startQuizButton = (Button) findViewById( R.id.startQuizButton);
         Button startConverterButton = (Button) findViewById( R.id.startConverterButton );
+        Button tutorialButton = (Button) findViewById(R.id.tutorialButton);
 
         TextView resp = (TextView) findViewById(R.id.response);
         Intent intent = getIntent();
@@ -51,6 +52,14 @@ public class Introduction extends Activity implements OnClickListener {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ConverterActivity.class);
+                MyUtils.startNoHistoryAcitivity( getActivity(), intent );
+            }
+        });
+
+        tutorialButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Tutorial.class);
                 MyUtils.startNoHistoryAcitivity( getActivity(), intent );
             }
         });
@@ -84,7 +93,7 @@ public class Introduction extends Activity implements OnClickListener {
 
     /**
      * Handle action bar item clicks here. The action bar will
-     * utomatically handle clicks on the Home/Up button, so long
+     * automatically handle clicks on the Home/Up button, so long
      * as you specify a parent activity in AndroidManifest.xml.
      * @param item
      * @return
