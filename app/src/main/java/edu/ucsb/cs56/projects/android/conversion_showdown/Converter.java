@@ -24,47 +24,22 @@ public class Converter {
         this.num = Integer.parseInt(s , base);
     }
 
-    public void replaceNum(int inputNum){
-        this.num = inputNum;
-    }
-
-    /**
-     * Return a String of number in Hex.
-     * @return
-     */
     public String toHex(){
         return Integer.toHexString(this.num);
     }
 
-    /**
-     * Return a String of number in Oct.
-     * @return
-     */
     public String toOct(){
         return Integer.toOctalString(this.num);
     }
 
-    /**
-     * Return a String of number in Dec.
-     * @return
-     */
     public String toDec(){
         return Integer.toString(this.num);
     }
 
-    /**
-     * Return a String of number in Bin.
-     * @return
-     */
     public String toBin(){
         return Integer.toBinaryString(this.num);
     }
 
-    /**
-     * Gives the correct method based on input of base.
-     * @param base
-     * @return
-     */
     public String toBase(int base){
         switch(base){
             case(2):
@@ -77,14 +52,6 @@ public class Converter {
                 return toHex();
         }
         return null;
-    }
-
-    /**
-     * Return a boolean variable indicating the validity of the request.
-     * @return
-     */
-    public boolean isValid(){
-        return isValid;
     }
 
 }

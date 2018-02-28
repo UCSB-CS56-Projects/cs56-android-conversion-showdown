@@ -22,14 +22,6 @@ public class MyUtils {
                 'A', 'B', 'C', 'D', 'E', 'F'
         }));
 
-    static TreeSet<Integer> baseWhiteList = new TreeSet<Integer>(){
-        {
-            add( 2 );
-            add( 8 );
-            add( 10 );
-            add( 16 );
-        }
-    };
     public static void hideSoftKeyBoard(View view, InputMethodManager imm){
         if ( view != null ) {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
@@ -47,8 +39,9 @@ public class MyUtils {
      * lower cases and upper cases are both okay
      * @param sAnswer
      * @param radix
-     * @return
+     * @return isValid
      * @throws IntOverFlow
+     * @throws SanityCheckException
      */
 
 
@@ -58,15 +51,29 @@ public class MyUtils {
         }
         char[] answerChars = sAnswer.toCharArray();
         boolean isValid = false;
+
+        // if 0111 in decimal
         if(radix==10 && answerChars[0]=='0' && answerChars.length!=1){
             throw new SanityCheckException();
-        } else if(radix==10 && answerChars[0]=='-' && answerChars.length==1){
+        }
+
+        // if only -
+        else if(answerChars[0]=='-' && answerChars.length==1){
             throw new SanityCheckException();
-        } else if(radix==10 && answerChars[0]=='-' && answerChars[1]=='0' && answerChars.length==2){
+        }
+
+        //if -0
+        else if(answerChars[0]=='-' && answerChars[1]=='0' && answerChars.length==2){
             throw new SanityCheckException();
-        } else if(radix!=10 && answerChars[0]=='-'){
+        }
+
+        // if - appears in any base except decimal base
+        else if(radix!=10 && answerChars[0]=='-'){
             throw new SanityCheckException();
-        } else {
+        }
+
+        //check every char in answerChars is valid
+        else {
             for (char c : answerChars) {
                 isValid = false;
                 for (int i = 0; i < radix+1; ++i) {

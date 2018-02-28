@@ -274,7 +274,7 @@ public class Quiz extends Activity implements OnClickListener {
             set_input_error(0, answer);
             return;
         } catch (SanityCheckException e){
-            set_input_error(0, answer); //stub!!!
+            set_input_error(0, answer);
         }
 
         //user Answer is the answer from the user.
@@ -373,13 +373,6 @@ public class Quiz extends Activity implements OnClickListener {
      * @param view
      */
     public void changeNumber(View view) {
-        /*
-        Sorry, following codes are restructured for initial random number.
-        if (IndexArrayKeys == length-1) {  //variable length created in onCreate method, tells length of ArrayList
-            IndexArrayKeys = 0;            //make sure that when changing key/problem type you don't go out of bounds
-        }
-        else{ IndexArrayKeys = IndexArrayKeys + 1; }  //changes the key/problem type
-        */
         key = arrayOfKeys.get(IndexArrayKeys);
         IndexArrayKeys = (IndexArrayKeys + 1) % length;
 
@@ -478,37 +471,16 @@ public class Quiz extends Activity implements OnClickListener {
     public void Abort(View view) {
         endQuiz();
     }
+
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-
-        // Save UI state changes to the savedInstanceState.
-        // This bundle will be passed to onCreate if the process is
-        // killed and restarted.
 
         savedInstanceState.putBoolean("MyBoolean", true);
         savedInstanceState.putDouble("myDouble", 1.9);
         savedInstanceState.putInt("MyInt", 1);
         savedInstanceState.putString("MyString", "Welcome back to Android");
 
-        // etc.
-
         super.onSaveInstanceState(savedInstanceState);
-    }
-
-//onRestoreInstanceState
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-
-        super.onRestoreInstanceState(savedInstanceState);
-
-        // Restore UI state from the savedInstanceState.
-        // This bundle has also been passed to onCreate.
-
-        boolean myBoolean = savedInstanceState.getBoolean("MyBoolean");
-        double myDouble = savedInstanceState.getDouble("myDouble");
-        int myInt = savedInstanceState.getInt("MyInt");
-        String myString = savedInstanceState.getString("MyString");
     }
 
 }
