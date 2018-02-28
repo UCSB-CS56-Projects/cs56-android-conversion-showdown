@@ -18,7 +18,7 @@ public class MyUtils {
 
     //The characters shown are basically what are allowed
     final public static ArrayList<Character> symbols = new ArrayList<>(Arrays.asList(new Character[]{
-                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                 'A', 'B', 'C', 'D', 'E', 'F'
         }));
 
@@ -60,13 +60,18 @@ public class MyUtils {
         boolean isValid = false;
         if(radix==10 && answerChars[0]=='0' && answerChars.length!=1){
             throw new SanityCheckException();
+        } else if(radix==10 && answerChars[0]=='-' && answerChars.length==1){
+            throw new SanityCheckException();
+        } else if(radix==10 && answerChars[0]=='-' && answerChars[1]=='0' && answerChars.length==2){
+            throw new SanityCheckException();
+        } else if(radix!=10 && answerChars[0]=='-'){
+            throw new SanityCheckException();
         } else {
             for (char c : answerChars) {
                 isValid = false;
-                for (int i = 0; i < radix; ++i) {
+                for (int i = 0; i < radix+1; ++i) {
                     Character target = symbols.get(i);
-                    if ((target.equals(c)) |
-                            (target.isLetter(target) && Character.toLowerCase(target) == c)) {
+                    if ((target.equals(c)) | (target.isLetter(target) && Character.toLowerCase(target) == c)) {
                         isValid = true;
                         break;
                     }

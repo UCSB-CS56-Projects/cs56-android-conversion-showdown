@@ -37,7 +37,6 @@ public class baseCalculator extends Activity {
     private Button addButton;
     private Button subtractButton;
     private Button multiplyButton;
-    private InputMethodManager inputMethodManager;
     private static Map<Integer, String> base2Str = new HashMap<Integer, String>() {
         {
             put(2, "Bin");
@@ -46,8 +45,6 @@ public class baseCalculator extends Activity {
             put(16, "Hex");
         }
     };
-
-    private GoogleApiClient client;
 
     private void update_base(int base, int whichBase) {
         if (whichBase == 0) {
@@ -115,7 +112,6 @@ public class baseCalculator extends Activity {
         subtractButton = (Button) findViewById(R.id.subtractButton);
         multiplyButton = (Button) findViewById(R.id.multiplyButton);
 
-        inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,10 +150,7 @@ public class baseCalculator extends Activity {
             public void onClick(View v) {
                 showPopup(v, 2);
             }
-        });// ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        });
     }
 
     public void goBack(View view){
@@ -180,24 +173,31 @@ public class baseCalculator extends Activity {
 
             int input1_decimal = Integer.parseInt(converter1.toBase(10));
             int input2_decimal = Integer.parseInt(converter2.toBase(10));
+            int value = 0;
             if (operation == 0) {
-                result = Integer.toString(input1_decimal + input2_decimal);
+                value = input1_decimal + input2_decimal;
             } else if (operation == 1) {
-                int value = input1_decimal - input2_decimal;
-                if (value < 0) {
-                    negative = true;
-                } else {
-                    negative = false;
-                }
-                result = Integer.toString(Math.abs(value));
+                value = input1_decimal - input2_decimal;
             } else if (operation == 2) {
-                result = Integer.toString(input1_decimal * input2_decimal);
+                value = input1_decimal * input2_decimal;
             }
+            if (value < 0) {
+                negative = true;
+            } else {
+                negative = false;
+            }
+            result = Integer.toString(value);
             Converter converter3 = new Converter(result, 10);
             if (!negative) {
                 baseCalcResult.setText(converter3.toBase(resultBase));
             } else {
-                baseCalcResult.setText("-" + converter3.toBase(resultBase));
+                if(resultBase==10){
+                    baseCalcResult.setText(converter3.toBase(resultBase));
+                } else if(resultBase==2){
+                    baseCalcResult.setText(converter3.toBase(resultBase));
+                } else{
+                    baseCalcResult.setText(converter3.toBase(resultBase));
+                }
             }
         } catch (IntOverFlow e) {
             firstInput.setError("At least one of the input numbers is too large");

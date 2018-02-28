@@ -21,7 +21,11 @@ public class Converter {
             isValid = false;
             return;
         }
-        num = Integer.parseInt(s , base);
+        this.num = Integer.parseInt(s , base);
+    }
+
+    public void replaceNum(int inputNum){
+        this.num = inputNum;
     }
 
     /**
@@ -29,7 +33,7 @@ public class Converter {
      * @return
      */
     public String toHex(){
-        return Integer.toString( num, 16 );
+        return Integer.toHexString(this.num);
     }
 
     /**
@@ -37,21 +41,23 @@ public class Converter {
      * @return
      */
     public String toOct(){
-        return Integer.toString( num, 8 );
+        return Integer.toOctalString(this.num);
     }
 
     /**
      * Return a String of number in Dec.
      * @return
      */
-    public String toDec(){ return Integer.toString(num, 10);}
+    public String toDec(){
+        return Integer.toString(this.num);
+    }
 
     /**
      * Return a String of number in Bin.
      * @return
      */
     public String toBin(){
-        return Integer.toString( num, 2 );
+        return Integer.toBinaryString(this.num);
     }
 
     /**
