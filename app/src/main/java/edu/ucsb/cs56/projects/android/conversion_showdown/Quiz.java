@@ -355,8 +355,6 @@ public class Quiz extends Activity implements OnClickListener {
         activity.putExtra("scoreBoardByKey", scoreBoardByKey);
         activity.putExtra("arrayOfKeys", new ArrayList<Integer>(arrayOfKeys));
         activity.putExtra("wrongQuestions", wrongQuestions);
-        //parcelWrongQuestions( activity );
-        //MyUtils.startNoHistoryAcitivity(this, activity);
         startActivity( activity );
     }
 
@@ -373,16 +371,17 @@ public class Quiz extends Activity implements OnClickListener {
      * @param view
      */
     public void changeNumber(View view) {
+
         key = arrayOfKeys.get(IndexArrayKeys);
         IndexArrayKeys = (IndexArrayKeys + 1) % length;
 
-        EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);      //allows change of keyboard when user clicks AnswerField
-        TextView questionDescription = (TextView) findViewById(R.id.textView3);      //allows change of question phrase at the top
-        TextView problemString = (TextView) findViewById(R.id.convertstring);   //allows change of string in format "NumberType:"
+        EditText editkeyboard = (EditText) findViewById(R.id.AnswerField);       //allows change of keyboard when user clicks AnswerField
+        TextView questionDescription = (TextView) findViewById(R.id.textView3);  //allows change of question phrase at the top
+        TextView problemString = (TextView) findViewById(R.id.convertstring);    //allows change of string in format "NumberType:"
 
-        TextView change = (TextView) findViewById(R.id.convertThis);    //allows change of number to be converted
-        Random rand = new Random();                                     //need this to make a random number
-        int number = generateQuestionNumber();                                 //assign random number to variable int
+        TextView change = (TextView) findViewById(R.id.convertThis);             //allows change of number to be converted
+        Random rand = new Random();                                              //need this to make a random number
+        int number = generateQuestionNumber();                                   //assign random number to variable int
 
         if (key == 1 || key == 3 || key == 7) {
             //radix 10
@@ -475,6 +474,12 @@ public class Quiz extends Activity implements OnClickListener {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
 
+        /*
+        Save UI state changes to the savedInstanceState.
+        This bundle will be passed to onCreate if the process is
+        killed and restarted.
+        */
+
         savedInstanceState.putBoolean("MyBoolean", true);
         savedInstanceState.putDouble("myDouble", 1.9);
         savedInstanceState.putInt("MyInt", 1);
@@ -482,5 +487,25 @@ public class Quiz extends Activity implements OnClickListener {
 
         super.onSaveInstanceState(savedInstanceState);
     }
+
+
+//onRestoreInstanceState
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        super.onRestoreInstanceState(savedInstanceState);
+
+        /*
+        Restore UI state from the savedInstanceState.
+        This bundle has also been passed to onCreate.
+        */
+
+        boolean myBoolean = savedInstanceState.getBoolean("MyBoolean");
+        double myDouble = savedInstanceState.getDouble("myDouble");
+        int myInt = savedInstanceState.getInt("MyInt");
+        String myString = savedInstanceState.getString("MyString");
+    }
+
 
 }
