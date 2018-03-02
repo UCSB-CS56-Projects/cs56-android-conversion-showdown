@@ -18,12 +18,6 @@ public class Introduction extends Activity implements OnClickListener {
 
     Button btnStartAnotherActivity;
 
-    public void hideSoftKeyBoard(View view){
-        if ( view != null ) {
-            InputMethodManager imm = (InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
