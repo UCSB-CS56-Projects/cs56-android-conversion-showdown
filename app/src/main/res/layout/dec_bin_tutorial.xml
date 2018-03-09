@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4B77BE"
+    tools:context="edu.ucsb.cs56.projects.android.conversion_showdown.decBinTutorial">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/decBinTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Dec 2 Bin 2 Dec Tutorial"
+            android:textColor="#00ff00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/decBinTitle"
+            android:layout_marginTop="40dp"
+            android:inputType="textMultiLine"
+            android:text="
+            Convert Binary to Decimal Number\n
+1. Write down the binary number.\n
+2. List the powers of two from right to left.\n
+3. Write the digits of the binary number below their corresponding powers.\n
+4. Connect the digits in the binary number with their corresponding powers.\n
+5. Write down the final value of each power of two.\n
+6. Add the final values.\n
+7. Write the answer along with its base subscript."
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView11"
+            android:layout_margin="10dp"
+            android:layout_marginTop="22dp"
+            android:inputType="textMultiLine"
+            android:text="
+            Convert Decimal to Binary Number\n
+1. Write down the decimal number.\n
+2. Write the integer answer (quotient) under the long division symbol, and write the remainder (0 or 1) to the right of the dividend.\n
+3. Continue downwards, dividing each new quotient by two and writing the remainders to the right of each dividend. Stop when the quotient is 0.\n
+4. Write out the new, binary number. Starting with the bottom remainder, read the sequence of remainders upwards to the top.\n"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

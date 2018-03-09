@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4B77BE"
+    tools:context="edu.ucsb.cs56.projects.android.conversion_showdown.hexDecTutorial">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Hex 2 Dec 2 Hex Tutorial"
+            android:textColor="#00ff00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView11"
+            android:layout_margin="10dp"
+            android:layout_marginTop="22dp"
+            android:inputType="textMultiLine"
+            android:text="
+            Convert Hexadecimal to Decimal Number\n
+1. Get the last digit of the hex number, call this digit the currentDigit.\n
+2. Make a variable, let's call it power.  Set the value to 0.\n
+3. Multiply the current digit with (16^power), store the result.\n
+4. Increment power by 1.\n
+5. Set the the currentDigit to the previous digit of the hex number.\n
+6. Repeat from step 3 until all digits have been multiplied.\n
+7. Sum the result of step 3 to get the answer number.\n"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9"
+            android:layout_alignTop="@+id/textView9"
+            android:layout_marginTop="40dp"
+            android:inputType="textMultiLine"
+            android:text="
+            Convert Decimal to Hexadecimal Number\n
+1. Divide the decimal number by 16. Treat the division as an integer division.\n
+2. Write down the remainder (in hexadecimal).\n
+3. Divide the result again by 16. Treat the division as an integer division.\n
+4. Repeat step 2 and 3 until result is 0.\n
+5. The hex value is the digit sequence of the remainders from the last to first.\n"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

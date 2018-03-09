@@ -35,12 +35,6 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
             Fragment createFragment();
         }
 
-        class ExpressionCalculatorFragmentFactory implements FragmentFactory {
-            public Fragment createFragment() {
-                return new ExpressionCaculatorFragment();
-            }
-        }
-
         class ConverterFragmentFactory implements FragmentFactory {
             public Fragment createFragment() {
                 return new ConverterFragment();
@@ -62,7 +56,6 @@ public class SwiperCalculatorActivity extends ActionBarActivity {
             SwipePage.addOnPageChangeListener(this);
             mFragments = new ArrayList<>(); //implicitly holds type FragmentFactory
             mFragments.add(new ConverterFragmentFactory() );
-            mFragments.add(new ExpressionCalculatorFragmentFactory());
         }
 
         @Override

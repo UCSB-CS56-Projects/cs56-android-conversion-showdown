@@ -16,51 +16,30 @@ public class Converter {
      * @param base
      * @throws IntOverFlow
      */
-    public Converter(String s , int base) throws IntOverFlow {
+    public Converter(String s , int base) throws IntOverFlow, SanityCheckException {
         if (!MyUtils.sanity_check(s, base)) {
             isValid = false;
             return;
         }
-        num = Integer.parseInt(s , base);
+        this.num = Integer.parseInt(s , base);
     }
 
-    /**
-     * Return a String of number in Hex.
-     * @return
-     */
     public String toHex(){
-        return Integer.toHexString( num );
+        return Integer.toHexString(this.num);
     }
 
-    /**
-     * Return a String of number in Oct.
-     * @return
-     */
     public String toOct(){
-        return Integer.toOctalString( num );
+        return Integer.toOctalString(this.num);
     }
 
-    /**
-     * Return a String of number in Dec.
-     * @return
-     */
     public String toDec(){
-        return num.toString();
+        return Integer.toString(this.num);
     }
 
-    /**
-     * Return a String of number in Bin.
-     * @return
-     */
     public String toBin(){
-        return Integer.toBinaryString( num );
+        return Integer.toBinaryString(this.num);
     }
 
-    /**
-     * Gives the correct method based on input of base.
-     * @param base
-     * @return
-     */
     public String toBase(int base){
         switch(base){
             case(2):
@@ -73,14 +52,6 @@ public class Converter {
                 return toHex();
         }
         return null;
-    }
-
-    /**
-     * Return a boolean variable indicating the validity of the request.
-     * @return
-     */
-    public boolean isValid(){
-        return isValid;
     }
 
 }

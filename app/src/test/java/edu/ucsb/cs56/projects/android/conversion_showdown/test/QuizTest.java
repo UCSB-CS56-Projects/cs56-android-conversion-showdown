@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import edu.ucsb.cs56.projects.android.conversion_showdown.IntOverFlow;
 import edu.ucsb.cs56.projects.android.conversion_showdown.MyUtils;
+import edu.ucsb.cs56.projects.android.conversion_showdown.SanityCheckException;
 
 import static org.junit.Assert.*;
 
@@ -21,6 +22,8 @@ public class QuizTest {
             assertEquals(ans, res);
         } catch (IntOverFlow e) {
             assert false;
+        } catch (SanityCheckException e){
+            assert false;
         }
     }
 
@@ -32,6 +35,8 @@ public class QuizTest {
             boolean ans = true;
             assertEquals(ans, res);
         } catch (IntOverFlow e) {
+            assert false;
+        } catch (SanityCheckException e){
             assert false;
         }
     }
@@ -45,6 +50,8 @@ public class QuizTest {
             assertEquals(ans, res);
         } catch (IntOverFlow e) {
             assert false;
+        } catch (SanityCheckException e){
+            assert false;
         }
     }
 
@@ -56,6 +63,8 @@ public class QuizTest {
             boolean ans = true;
             assertEquals(ans, res);
         } catch (IntOverFlow e) {
+            assert false;
+        } catch (SanityCheckException e){
             assert false;
         }
     }
@@ -69,6 +78,8 @@ public class QuizTest {
             assertEquals(ans,res);
         } catch (IntOverFlow e) {
             assert false;
+        } catch (SanityCheckException e){
+            assert false;
         }
     }
 
@@ -80,6 +91,8 @@ public class QuizTest {
             boolean ans = true;
             assertEquals(ans,res);
         } catch (IntOverFlow e) {
+            assert false;
+        } catch (SanityCheckException e){
             assert false;
         }
     }
@@ -93,6 +106,8 @@ public class QuizTest {
             assertEquals(ans,res);
         } catch (IntOverFlow e) {
             assert false;
+        } catch (SanityCheckException e){
+            assert false;
         }
     }
 
@@ -104,6 +119,8 @@ public class QuizTest {
             boolean ans = true;
             assertEquals(ans,res);
         } catch (IntOverFlow e) {
+            assert false;
+        } catch (SanityCheckException e){
             assert false;
         }
     }
