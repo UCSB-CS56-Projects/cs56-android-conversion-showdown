@@ -61,26 +61,25 @@ Download the lastest version of Android Studio at the following link: http://dev
 Run the app by clicking Run on Android Studio. Choose any Android Device as your emulator and the application should start. You will be prompted with a welcome screen, after which you are invited to type in your name and a welcome message will be displayed. Next screen is a simple calculator you can play around with. Following is the quiz itself, which contains checkboxes for the types of conversions (ie. Decimal to Binary or Octal to Hexadecimal) and radio buttons for the length of the quiz (ie. 6 questions, 12 questions, etc.) You will then be prompted with the quiz interface itself, where a number is given and the user will be prompted to type in the correct conversion. A "Change Number" feature is added if the current problem is too difficult. A "Percentage" feature has also been implemented to tell the user how well they are doing as they are progressing throughout the quiz. 
 
 ## Javadoc
-JavaDoc Link: https://github.com/kerrymo/cs56-android-conversion-showdown/tree/proj01/javadoc
-
+JavaDoc Link: http://ucsb-cs56-projects.github.io/cs56-android-conversion-showdown/javadoc/
 
 
 ## Screenshots
 
 Screenshots of the running Application goes here. <br />
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss0.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss1.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss2.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss3.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss4.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss5.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss6.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss7.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss8.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss9.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss10.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss11.png)
-![Alt tag](https://github.com/kerrymo/cs56-android-conversion-showdown/blob/proj01/app/src/readmePic/ss12.png)
+![Alt tag](/app/src/readmePic/ss0.png)
+![Alt tag](/app/src/readmePic/ss1.png)
+![Alt tag](/app/src/readmePic/ss2.png)
+![Alt tag](/app/src/readmePic/ss3.png)
+![Alt tag](/app/src/readmePic/ss4.png)
+![Alt tag](/app/src/readmePic/ss5.png)
+![Alt tag](/app/src/readmePic/ss6.png)
+![Alt tag](/app/src/readmePic/ss7.png)
+![Alt tag](/app/src/readmePic/ss8.png)
+![Alt tag](/app/src/readmePic/ss9.png)
+![Alt tag](/app/src/readmePic/ss10.png)
+![Alt tag](/app/src/readmePic/ss11.png)
+![Alt tag](/app/src/readmePic/ss12.png)
 
 
 ## Legacy Code Issues

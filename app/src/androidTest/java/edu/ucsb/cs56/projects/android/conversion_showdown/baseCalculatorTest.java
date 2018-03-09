@@ -96,7 +96,7 @@ public class baseCalculatorTest {
     @Test
     public void testCalcHex() {
         onView(withId(R.id.firstInput))
-                .perform(typeText("f"), closeSoftKeyboard());
+                .perform(typeText("F"), closeSoftKeyboard());
         onView(withId(R.id.secondInput))
                 .perform(typeText("5"), closeSoftKeyboard());
 
