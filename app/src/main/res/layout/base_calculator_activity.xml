@@ -76,7 +76,7 @@
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textSize="24sp"
-            android:digits="abcdef1234567890 "
+            android:digits="-abcdefABCDEF1234567890 "
             android:textAllCaps="true"
             android:typeface="sans" />
 
@@ -93,7 +93,7 @@
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textSize="24sp"
-            android:digits="abcdef1234567890 "
+            android:digits="-abcdefABCDEF1234567890 "
             android:textAllCaps="true"
             android:typeface="sans" />
 

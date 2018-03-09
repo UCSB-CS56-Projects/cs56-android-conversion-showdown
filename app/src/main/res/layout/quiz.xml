@@ -91,6 +91,7 @@
         android:ems="10"
         android:textColor="#FFFFFF"
         android:id="@+id/AnswerField"
+        android:digits="-abcdefABCDEF1234567890 "
         android:layout_alignTop="@+id/AnswerString"
         android:layout_toRightOf="@+id/RightOrWrong"
         android:layout_toEndOf="@+id/RightOrWrong" />
