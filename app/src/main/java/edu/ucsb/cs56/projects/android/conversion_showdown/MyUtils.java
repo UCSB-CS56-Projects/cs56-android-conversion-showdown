@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.TreeSet;
 
 /**
- * Checks appropriate input
- * Created by UMARU on 7/15/2016.
+ * Checks appropriate input. Only allow 0 and 1 for bin, allow -0123456789 for dec, allow 0123456789abcdefgABCDEFG for hex
+ * Created by UMARU on 7/15/2016. Modified sanity_check methods by Claudia Zeng and Kerry Mo on 03/13/2018. It will throw SanityCheckException when users give wrong input format.
  */
 
 public class MyUtils {

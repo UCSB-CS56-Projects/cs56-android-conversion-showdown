@@ -1,7 +1,7 @@
 package edu.ucsb.cs56.projects.android.conversion_showdown;
 
 /**
- * Created by UMARU on 7/27/2016.
+ * Created by UMARU on 7/27/2016. This class deals with conversion between bases in application. It checkes the validity of the request to change its base. If it's invalid, it throws the exception IntOverFlow or SanityCheckException. It also contains the methods to convert decimal numbers to specific base string including Hex/Bin/Oct.
  */
 
 //Deals with conversion between bases in application
