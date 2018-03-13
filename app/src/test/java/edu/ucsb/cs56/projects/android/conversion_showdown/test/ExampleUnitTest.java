@@ -13,4 +13,15 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
+    // Add More Tests, KM/CZ 03/12/2018
+    @Test
+    public void subtraction_isCorrect() throws Exception {
+        assertEquals(0, 2 - 2);
+    }
+
+    @Test
+    public void multiplication_isCorrect() throws Exception {
+        assertEquals(4, 2 * 2);
+    }
+
 }

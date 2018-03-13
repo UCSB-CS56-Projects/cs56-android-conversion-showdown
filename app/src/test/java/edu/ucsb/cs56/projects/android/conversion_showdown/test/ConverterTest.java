@@ -13,7 +13,7 @@ public class ConverterTest {
     public  void setUp() throws Exception{
     }
 
-    //decimal to..
+    //decimal to...
     @Test
     public void testToHex() throws Exception {
         Converter convertor = new Converter("10", 10);
@@ -38,7 +38,7 @@ public class ConverterTest {
         assertEquals( "1010", convertor.toBin() );
     }
 
-    //
+    //binary to...
     @Test
     public void testToHex2() throws Exception {
         Converter convertor = new Converter("11010", 2);
@@ -60,5 +60,56 @@ public class ConverterTest {
     public void testToBin2() throws Exception {
         Converter convertor = new Converter("11010", 2);
         assertEquals( "11010", convertor.toBin() );
+    }
+
+    // Add More Tests, KM/CZ 3/12/2018
+    //octal to...
+    @Test
+    public void testToBin8() throws Exception {
+        Converter convertor = new Converter("74", 8);
+        assertEquals( "111100", convertor.toBin() );
+    }
+
+    @Test
+    public void testToHex8() throws Exception {
+        Converter convertor = new Converter("74", 8);
+        assertEquals( "3c", convertor.toHex() );
+    }
+
+    @Test
+    public void testToDec8() throws Exception {
+        Converter convertor = new Converter("74", 8);
+        assertEquals( "60", convertor.toDec() );
+    }
+
+    @Test
+    public void testToOct8() throws Exception {
+        Converter convertor = new Converter("74", 8);
+        assertEquals( "74", convertor.toOct() );
+    }
+
+    //hexadecimal to...
+    @Test
+    public void testToBin16() throws Exception {
+        Converter convertor = new Converter("F12", 16);
+        assertEquals( "111100010010", convertor.toBin() );
+    }
+
+    @Test
+    public void testToDec16() throws Exception {
+        Converter convertor = new Converter("F12", 16);
+        assertEquals( "3858", convertor.toDec() );
+    }
+
+    @Test
+    public void testToOct16() throws Exception {
+        Converter convertor = new Converter("F12", 16);
+        assertEquals( "7422", convertor.toOct() );
+    }
+
+    @Test
+    public void testToHex16() throws Exception {
+        Converter convertor = new Converter("F12", 16);
+        assertEquals( "f12", convertor.toHex() );
     }
 }
