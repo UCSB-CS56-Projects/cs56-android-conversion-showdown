@@ -44,5 +44,10 @@ public class Tutorial extends Activity{
         return this;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
 }

@@ -15,4 +15,10 @@ public class decBinTutorial extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dec_bin_tutorial);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

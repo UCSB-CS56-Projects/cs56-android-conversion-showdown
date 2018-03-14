@@ -28,8 +28,10 @@ public class MyUtils {
         }
     }
 
+    //we modified this class to store activity histories to stack in order to make back button behavior correct
     public static void startNoHistoryAcitivity(Activity acc, Intent intent){
-        intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        //intent.setFlags(intent.getFlags()| Intent.FLAG_ACTIVITY_NO_HISTORY);
+        intent.setFlags(intent.getFlags());
         acc.startActivity( intent );
     }
 

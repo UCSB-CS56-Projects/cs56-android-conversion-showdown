@@ -15,4 +15,10 @@ public class hexDecTutorial extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hex_dec_tutorial);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

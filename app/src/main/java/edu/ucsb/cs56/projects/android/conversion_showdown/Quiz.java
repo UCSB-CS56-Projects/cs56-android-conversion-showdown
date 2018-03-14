@@ -506,5 +506,11 @@ public class Quiz extends Activity implements OnClickListener {
         String myString = savedInstanceState.getString("MyString");
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
 
 }
