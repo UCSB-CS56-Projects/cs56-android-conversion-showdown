@@ -46,7 +46,6 @@
             android:name=".ScoreReport"
             android:label="Conversion Showdown!" />
         <activity android:name=".TestActivity1" />
-        <activity android:name=".TestActivity2" />
         <activity android:name=".SwiperCalculatorActivity">
 
             <!-- Requires fragments to allow user to switch calculator by swiping -->
