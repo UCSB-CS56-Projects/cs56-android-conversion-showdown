@@ -30,6 +30,7 @@ configurations.all {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support:support-annotations:23.1.1' //added to test activity
     androidTestCompile 'com.android.support.test:runner:0.5' //added to test activity
