@@ -5,7 +5,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * To work on unit tests, switch the Test Artifact in the Build Variants view.
+ * Modified by Claudia Zeng and Kerry Mo on 02/25/2018. This class contains three simple test cases
+ * that each is given two number with an operation and check if it matches the expected value.
+ * Run the test simply by right clicking the test in Project display and select “Run ‘ExampleUnitTest’”,
+ * then just wait for the test result.
  */
 public class ExampleUnitTest {
     @Test

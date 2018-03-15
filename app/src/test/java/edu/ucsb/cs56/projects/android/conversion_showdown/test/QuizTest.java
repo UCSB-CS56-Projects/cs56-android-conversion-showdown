@@ -9,7 +9,11 @@ import edu.ucsb.cs56.projects.android.conversion_showdown.SanityCheckException;
 import static org.junit.Assert.*;
 
 /**
- * Created by UMARU on 7/12/2016.
+ * Created by UMARU on 7/12/2016. Modified by Claudia Zeng and Kerry Mo on 02/25/2018.
+ * This class contains test cases that use the sanity check function for each sample string in a specific base,
+ * and check if the sanity check function returns the expected boolean value. Run the test simply by
+ * right clicking the test in Project display and select “Run ‘QuizTest’”, then just wait for the test result.
+
  */
 
 public class QuizTest {

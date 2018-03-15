@@ -6,7 +6,11 @@ import static org.junit.Assert.*;
 import edu.ucsb.cs56.projects.android.conversion_showdown.Converter;
 
 /**
- * Created by UMARU on 7/26/2016.
+ * Created by UMARU on 7/26/2016. Modified by Claudia Zeng and Kerry Mo on 02/25/2018.
+ * This class contains JUnit test cases for the Converter activity. Each test gives a number in a specific base
+ * and checks if the convertor gives the expected answer in another base. Run the test simply by
+ * right clicking the test in Project display and select “Run ‘ConverterTest’”, then just wait for the test result.
+
  */
 public class ConverterTest {
     @Before
