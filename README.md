@@ -43,6 +43,7 @@ Fixed if button was pressed, no input was given, application would crash. Implem
 | Creators     | Henry Yu       | Phillip Fry        |
 | Instructors  | Phillip Conrad | Allison Shedded    |
 | Winter 2016  | CS 56          | UCSB               |
+| Winter 2018  | CS 56          | UCSB               |
 
 ## What is This?
 
@@ -84,7 +85,7 @@ Screenshots of the running Application goes here. <br />
 
 ## Legacy Code Issues
 
-Will be present in the "Issues" tab of this repository. https://github.com/henryhyu/android-quiz/issues
+Will be present in the "Issues" tab of this repository. https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues
 
 
 ## Project Point Distribution
@@ -167,3 +168,13 @@ The application concept is fairly simple and the code behind it can be easily un
 A huge problem with this application was the user interface. A lot of the existing pages were not well designed or user friendly. This definitely was not an application that looked appealing to use. A consistent theme has begun to form during the Fall 2016 quarter but has not been extended into the quiz portion of the application. Consider improving the user interface and theme of the quiz to something the general public would be interested in using.
 
 Some words of advice would be to really choose a legacy project that you are interested in and something you can learn from. When my partner and I took on this project, we both knew that we would have to do a lot of research and spend a lot of time working with this code. In the end, we found it extremely rewarding that we now knew how an android application works and we could develop something of the sort on our own. Advice for working on the actual code would be to use the android studio debugging feature when testing your code. Using this will help identify the source of the problem and can save you from sitting there bewildered about why the application crashed. Good luck on your quarter and I hope you enjoy your legacy project as much as we enjoyed it.
+
+## W18 Final Remarks
+
+The idea of this application is fairly easy to understand. It is a calculator to convert positive and negative numbers in binary/decimal/octal/hexdecimal. It also has the quiz page to let you practice the conversions. I would highly recommend you to download Android Studio and be familiar with it if it's your very first time to get hands on Android mobile apps. It's easy to get lost if you never touch this IDE before. Take a breath. Don't freak out. I promise you it's not that hard. All the codes can be found in /app/java/ directory and all the xml files which implement the UI interfaces are seperately stored in the /app/res directory. The quickest way to understand the application is to actually run it with emulator and play with it. 
+
+Currently, there are four activities inside the app. We modified the 'baseCalculator' class so now it supports both positive and negative numbers. However, for negative binary numbers, we decide to use 32-bit integer so it has bunches of 1s in front, and therefore it would show up in two lines. Hope you can fix it in next version. The tutorial page now only has the conversion tutorial for hex/bin and dec/bin. You may add some other tutorials if you want. Also the whole app will crash if you start from landview. Some of the classes don't have landview layouts where properly adjust the shape of textView, buttons, and pictures. It will also crash if you enter wrong format input in the quiz page while it should catch the 'sanityCheck exception'. For example, if it asks for converting decimal 10 to binary and you answer 32, then the app will stop. All other issues you can check in https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues. 
+
+I will suggest you to add more tests because currently most of the methods are not covered and therefore are less reliable. The backend part is essential. You can modify the login/signup page and store user id and their score reports in the backend storage or database. It would be great if this app can have email authentication or other social media authentication for login/signup. You can also create the profile page to let user add profile photos, background photos. It would always be great if you make the UI interface to be more user friendly. For example, thinking about adding the navigation bar at the bottom, or add the up back button for each page. 
+
+Last thing to mention here: be aware, Android Studio is a really buggy and slow IDE. You will spend tons of time on it. You will have some magic problems which you don't know what causes them and how to fix them. Please take advantage of the Internet, Google, StackOverFlow, Android Studio official tutorials, and youtube videos. The logcat in the bottom of the Android Studio will tell you more information when you run the code or have the errors. If unfortunately, you have some errors which you couldn't fix even though you try the suggestions online, try clean the project and make the project again, or resynchronize the build.gradle file. It might help. Good luck!
