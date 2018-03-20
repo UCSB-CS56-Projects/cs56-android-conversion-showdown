@@ -31,7 +31,7 @@ public class Welcome extends Activity implements OnClickListener{
         String name = nameUser.getText().toString(); //Set value of field to 'name' variable
         Intent intent = new Intent(this, Introduction.class);
         intent.putExtra(EXTRA_NAME, name); //Pass name of user to next activity
-       startActivity( intent );
+        startActivity( intent );
     }
 
 }

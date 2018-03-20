@@ -16,20 +16,19 @@ import java.util.Random;
 
 /**
  * Class that deals with the Quiz you can customize in Quiz Selection
- * <br>
- * KEY <br>
- * 1. Decimal to Binary conversion <br>
- * 2. Binary to Decimal conversion <br>
- * 3. Decimal to Octal conversion <br>
- * 4. Octal to Decimal conversion <br>
- * 5. Binary to Octal conversion <br>
- * 6. Octal to Binary conversion <br>
- * 7. Decimal to Hexadecimal conversion <br>
- * 8. Hexadecimal to Decimal conversion <br>
- * 9. Binary to Hexadecimal conversion <br>
- * 10. Hexadecimal to Binary conversion <br>
- * 11. Octal to Hexadecimal conversion <br>
- * 12. Hexadecimal to Octal conversion <br>
+ * KEY
+ * 1. Decimal to Binary conversion
+ * 2. Binary to Decimal conversion
+ * 3. Decimal to Octal conversion
+ * 4. Octal to Decimal conversion
+ * 5. Binary to Octal conversion
+ * 6. Octal to Binary conversion
+ * 7. Decimal to Hexadecimal conversion
+ * 8. Hexadecimal to Decimal conversion
+ * 9. Binary to Hexadecimal conversion
+ * 10. Hexadecimal to Binary conversion
+ * 11. Octal to Hexadecimal conversion
+ * 12. Hexadecimal to Octal conversion
  */
 public class Quiz extends Activity implements OnClickListener {
     int numberQuestions = 0;       // test length
@@ -505,6 +504,12 @@ public class Quiz extends Activity implements OnClickListener {
         double myDouble = savedInstanceState.getDouble("myDouble");
         int myInt = savedInstanceState.getInt("MyInt");
         String myString = savedInstanceState.getString("MyString");
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
 

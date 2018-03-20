@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Jordan Ang on 11/20/2016.
+ * Created by Jordan Ang on 11/20/2016. Modified by Claudia Zeng and Kerry Mo on 03/13/2018. An activity class where the user can add/subtract/multiply/divide two different based numbers and get a result in bin/dec/hex/oct. It will catch the exceptions when user inputs a number which is too large or has wrong format.
  */
 
 //Calculator that allows for user to input different bases

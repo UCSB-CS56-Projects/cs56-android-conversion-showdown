@@ -103,12 +103,11 @@ public class ScoreReport extends Activity {
         }
     }//onActivityResult
 
-    public void onBackPressed()
-    {
+    @Override
+    public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(ScoreReport.this, Introduction.class));
+        startActivity(new Intent(ScoreReport.this, QuizSelection.class));
         finish();
-
     }
 
 

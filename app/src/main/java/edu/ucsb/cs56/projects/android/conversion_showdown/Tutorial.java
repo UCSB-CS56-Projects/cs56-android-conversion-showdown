@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * It will bring up a new activity where contains several conversion tutorial documentations when users click "Tutorial" on the main page.
+ * Created by Claudia Zeng and Kerry Mo on 03/13/2018.
+ */
+
 public class Tutorial extends Activity{
 
     @Override
@@ -39,5 +44,10 @@ public class Tutorial extends Activity{
         return this;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
 }

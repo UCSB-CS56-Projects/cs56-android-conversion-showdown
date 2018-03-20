@@ -15,12 +15,14 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 
 /**
- * Created by irenepatt on 11/21/16.
+ * Created by irenepatt on 11/21/16. Modified by Claudia Zeng and Kerry Mo on 02/25/2018.
+ * This class contains JUnit test cases for the baseCalculator activity.
+ * Each test feeds the two inputs with numbers in specific bases, and gives operation as well as
+ * the desired result base, then checks if the baseCalculator gives an answer that is the same as the expected answer.
+ * Run the test simply by right clicking the test in Project display and select “Run ‘baseCalculatorTest’”,
+ * then just wait for the test result.
  */
 
-//Test cases to test the baseCalculator activity.
-// Run the test by right clicking "com.example.henry.mycalculator (androidTest)" and select the green triangle that says "Run Tests in.."
-//Just wait and watch the tests to run!
 @RunWith(AndroidJUnit4.class)
 public class baseCalculatorTest {
     @Rule
@@ -96,7 +98,7 @@ public class baseCalculatorTest {
     @Test
     public void testCalcHex() {
         onView(withId(R.id.firstInput))
-                .perform(typeText("f"), closeSoftKeyboard());
+                .perform(typeText("F"), closeSoftKeyboard());
         onView(withId(R.id.secondInput))
                 .perform(typeText("5"), closeSoftKeyboard());
 

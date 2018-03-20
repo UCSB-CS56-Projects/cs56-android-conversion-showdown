@@ -132,7 +132,7 @@ public class ConverterFragment extends Fragment {
             } catch (IntOverFlow e) {
                 mFromText.setError("Input Number Too Large");
             } catch (SanityCheckException e){
-                mFromText.setError("Input Format Error");
+                mFromText.setError("Input Format Wrong");
             }
 
         }
