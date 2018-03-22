@@ -1,0 +1,6 @@
+* Issue [#65](https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues/65) - Add code coverage using JaCoCo (200 pts)
+* Issue [#43](https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues/43) - Endless option does not have endless tests (50 pts)
+* Issue [#23](https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues/23) - Saving state (150 pts)
+* Issue [#58](https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues/58) - Make a new layout for welcome page to make it suitable to landscape view (150 pts)
+* Issue [#19](https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues/19) - Swipe view for converter fragment and expression calculator fragment (250 pts)
+* Issue [#13](https://github.com/ucsb-cs56-projects/cs56-android-conversion-showdown/issues/13) - SparkJava Backend (250 pts)
